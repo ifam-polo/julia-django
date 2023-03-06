@@ -20,6 +20,6 @@ from contas.views import get, name
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mine/', get),
+    path('get/', get),
     path('ju/', name),
 ]

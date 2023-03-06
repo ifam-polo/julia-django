@@ -8,5 +8,21 @@
 </head>
 <body>
     <h1>Bem-vindo!</h1>
+
+    <p>
+        data de hoje: {{ now }}   
+    </p>
+    <ul>
+    {% for transacao in transacoes %}
+
+        {% if transacao == "t1" %}
+            <li><strong>{{ transacao }}</strong></li>
+        {% else %}
+            <li>{{ transacao }}</li>
+        {% endif%}
+
+    {% endfor %}             
+    </ul>
+    
 </body>
 </html>

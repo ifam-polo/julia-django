@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from contas.views import home, transacao, listagem, nova_transacao
+from contas.views import home, transacao, listagem, nova_transacao, update, delete
 
 
 urlpatterns = [
@@ -24,4 +24,6 @@ urlpatterns = [
     path('transacao/', transacao), # mostra transações 
     path('lista/', listagem, name='url_lista'), # lista as transações feitas
     path('novaT/', nova_transacao, name='url_novaT'), # adiciona nova transação
+    path('update/<int:pk>/', update, name='url_update'),
+    path('delete/<int:pk>/', delete, name='url_delete'),
 ]

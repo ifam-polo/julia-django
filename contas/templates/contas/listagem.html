@@ -10,11 +10,11 @@
     <p><b>Transações feitas:</b></p>
     <ul>
         {% for transacao in transacoes %}
-            <li><b>Nome:</b> {{ transacao.descricao }}
+            <li><a href="{% url 'url_update' transacao.id %}"><b>Nome:</b> {{ transacao.descricao }}
                 <b>Data:</b> {{ transacao.data }}
                 <b>Valor:</b> {{ transacao.valor }}
-                <b>Categoria:</b> {{ transacao.categoria }}</li>
-                <b>Observações:</b> {{ transacao.obs }}
+                <b>Categoria:</b> {{ transacao.categoria }}
+                <b>Observações:</b> {{ transacao.obs }}</a></li>
         {% endfor %}
     </ul>
 
